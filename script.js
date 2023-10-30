@@ -31,9 +31,9 @@ var b =(arr)=>{
             result.push(arr[i]);
         }
     }
-    console.log(result);
+    return result;
 }
-b([2,6,48,5,3,9,11]);
+console.log(b([2,6,48,5,3,9,11]));
 
 //Question 2 : Convert all the strings to title caps in a string array
 
@@ -65,9 +65,9 @@ var d=(arr)=>{
         arr[i]=arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
         result.push(arr[i]);
     }
-    console.log(result);
+    return result;
 }
-d(["dinesh","ram","rupan","deepak"]);
+console.log(d(["dinesh","ram","rupan","deepak"]));
 
 //Question 3 : Sum of all numbers in an array
 
@@ -96,9 +96,9 @@ var f =(arr)=>{
     for(var i=0;i<arr.length;i++){
         result += +arr[i];
     }
-    console.log(result);
+    return result;
 }
-f([52,3,61,43,58]);
+console.log(f([52,3,61,43,58]));
 
 //Question 4 : Return all the prime numbers in an array
 
@@ -151,9 +151,9 @@ var h = (arr)=>{
             result.push(arr[i]);
         }
     }
-    console.log(result);
+    return result;
 }
-h([8,3,19,10,5,13,48,7,17]);
+console.log(h([8,3,19,10,5,13,48,7,17]));
 
 //Question 5 : Return all the palindromes in an array
 
@@ -191,9 +191,9 @@ var l = (arr)=>{
             result.push(arr[i]);
         }
     }
-    console.log(result);
+    return result;
 }
-l(["madam","hello","mam"]);
+console.log(l(["madam","hello","mam"]));
 
 //Question 6 : Return median of two sorted arrays of the same size.
 
