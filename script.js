@@ -199,40 +199,32 @@ console.log(l(["madam","hello","mam"]));
 
 //By Anonymous Function
 var m = function median(arr1,arr2){
-    var result =0;
-    function compareNumbers(p, q) {
-        return p- q;
-      }
     var temp = arr1.concat(arr2);
-    temp1 = temp.sort(compareNumbers);
+    //var temp = [...arr1,...arr2];
+    temp1 = temp.sort((p,q)=>p-q);
     var len = temp1.length;
     if(len%2 === 0){
-        result=(temp1[len/2]+temp1[(len/2)-1])/2;
+        return (temp1[len/2]+temp1[(len/2)-1])/2;
     }
     else{
-        result = temp[len/2];
+        return temp[Math.floor(len/2)];
     }
-    return result;
+    //return result;
 }
 console.log(m([2,5,6,8,16],[4,8,13,20,25]));
 
 //By IIFE Function
 (function (arr1,arr2){
-    var result =0;
-    function compareNumbers(p, q) {
-        return p- q;
-      }
     var temp = arr1.concat(arr2);
-    temp1 = temp.sort(compareNumbers);
+    temp1 = temp.sort((p,q)=>p-q);
     var len = temp1.length;
     if(len%2 === 0){
-        result=(temp1[len/2]+temp1[(len/2)-1])/2;
+        console.log((temp1[len/2]+temp1[(len/2)-1])/2);
     }
     else{
-        result = temp[len/2];
+        console.log(temp[Math.floor(len/2)]);
     }
-    console.log(result);
-})([2,5,6,8,16],[4,8,13,20,25]);
+})([2,5,6,8,16,48],[4,8,13,20,25,50]);
 
 //Question 7 : Remove duplicates from an array
 
@@ -260,7 +252,7 @@ console.log(s(["Dinesh","Ram","Deepak","Kirthick","Hari"],3));
 //console.log(s([5,6,2,3,8],3))
 
 //By IIFE Function
-(function rotate(arr,k){
+(function (arr,k){
     for(var i=1;i<=k;i++){
         arr.push(arr.shift());
     }
